@@ -366,29 +366,29 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   object-fit: cover;
   object-position: center top;
   display: block;
+  opacity: 0.72;     /* Figma: opacity 72% on the photo layer */
 }
 
-/* Dark gradient overlay so text reads */
+/* Fade to solid black at the bottom — Figma: linear-gradient(180deg, transparent 44.54%, #000 100%) */
 .hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.45) 55%,
-    rgba(0,0,0,0.1) 100%
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 44.54%,
+    rgb(0,0,0) 100%
   );
+  z-index: 1;
 }
 
-/* Subtle pink/purple tint from bottom */
+/* Darkening multiply layer — Figma: rgba(0,0,0,0.6) mix-blend-mode: multiply */
 .hero__overlay-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(168,101,255,0.22) 0%,
-    transparent 50%
-  );
+  background: rgba(0, 0, 0, 0.6);
+  mix-blend-mode: multiply;
+  z-index: 2;
 }
 
 /* Content */
@@ -411,14 +411,15 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 
 .hero__heading {
   font-family: var(--font-main);
-  font-size: clamp(52px, 7.5vw, 108px);
+  font-size: clamp(52px, 7.5vw, 112px);
   font-weight: 800;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
-  margin-bottom: 28px;
+  line-height: 0.88;          /* Figma: leading-84px at 112px = 0.75, loosen for readability */
+  letter-spacing: -1.8px;     /* Figma: tracking -1.8px */
+  text-transform: uppercase;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 4px;
 }
 
 .hero__heading-white {
@@ -435,10 +436,12 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   font-style: italic;
 }
 
+/* "Style" word: Poltawski Nowy Italic (regular weight italic) per Figma */
 .hero__style-word {
   font-family: 'Poltawski Nowy', serif;
   font-style: italic;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .hero__sub {
@@ -475,71 +478,89 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 }
 
 /* ============================================
-   MODELS GRID
+   MODELS — 3 floating photos on black
+   Figma node 146:2742  (design canvas ≈ 1854 × 984px)
    ============================================ */
 .models {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-  width: 100%;
-  height: 800px;
+  background: #000;
   overflow: hidden;
 }
 
-.models__left {
-  height: 100%;
-  overflow: hidden;
+/* Relative container that mirrors the Figma canvas */
+.models__stage {
   position: relative;
+  max-width: 1854px;
+  margin: 0 auto;
+  height: 940px;        /* Figma: 59px top + 894px image + ~87px bottom */
 }
-.models__main-img {
-  width: 100%;
-  height: 100%;
-  object-position: 33% center;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.6s var(--ease-out);
-}
-.models__main-img--bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.models__main-img--fg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.models__left-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.18);
-  z-index: 2;
-  pointer-events: none;
-}
-.models__left:hover .models__main-img { transform: scale(1.03); }
 
-.models__right {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 4px;
-  height: 100%;
-}
-.models__right-top,
-.models__right-bottom {
+/* Every card: absolute, clipped */
+.models__card {
+  position: absolute;
   overflow: hidden;
-  height: 100%;
 }
-.models__small-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+
+/* Left main shot — Figma: left 34px, top 59px, 1048×894 */
+.models__card--left {
+  left:  1.83%;          /* 34 / 1854 */
+  top:   59px;
+  width: 56.5%;          /* 1048 / 1854 */
+  aspect-ratio: 1048 / 894;
+}
+
+/* Top-right hairdryer — Figma: left 1134px, top 118px, 351×457 */
+.models__card--top-right {
+  left:  61.2%;          /* 1134 / 1854 */
+  top:   118px;
+  width: 18.9%;          /* 351 / 1854 */
+  aspect-ratio: 351 / 457;
+}
+
+/* Bottom-right gym model — Figma: left 1422px, top 312px, 398×613 */
+.models__card--bottom-right {
+  left:  76.7%;          /* 1422 / 1854 */
+  top:   312px;
+  width: 21.5%;          /* 398 / 1854 */
+  aspect-ratio: 398 / 613;
+}
+
+/* All images: absolutely positioned inside their clipped card.
+   Explicit widths set the render scale; offsets match Figma proportionally. */
+.models__img {
+  position: absolute;
   display: block;
-  transition: transform 0.6s var(--ease-out);
+  max-width: none;       /* never constrain by container width */
+  transition: transform 0.55s var(--ease-out);
 }
-.models__right-top:hover .models__small-img,
-.models__right-bottom:hover .models__small-img { transform: scale(1.04); }
+
+/* Left: 2752×1536 panoramic — Figma: w=152.97%, h=100%, left=0, top=0
+   Renders wider than card; overflow clips to show the model on the left */
+.models__img--left {
+  width: 152.97%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Hairdryer: 933×1536 portrait — Figma: w=265.81%, left=-10.83%, top=-48.58%
+   Renders larger than card; crops to the hairdryer close-up area */
+.models__card--top-right .models__img {
+  width: 265.81%;
+  height: auto;
+  left: -10.83%;
+  top: -48.58%;
+}
+
+/* Gym woman: 2752×1536 panoramic — Figma: w=276.31%, h=100%, left=-92.37%
+   Shifts left so only the right-portion (gym woman) is visible */
+.models__card--bottom-right .models__img {
+  width: 276.31%;
+  height: 100%;
+  left: -92.37%;
+  top: 0;
+}
+
+.models__card:hover .models__img { transform: scale(1.03); }
 
 /* ============================================
    FEATURES — "Designed for Your Hair"
@@ -794,25 +815,67 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 
 .ai-card__img {
   position: absolute;
-  width: 110%;
-  height: 90%;
-  top: 6%;
-  left: -5%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   display: block;
-  opacity: 0.8;
 }
 
-/* Gradient fade bottom */
+/* Gradient fade to black at bottom so text reads */
 .ai-card__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-    transparent 40%,
-    rgba(0,0,0,0.85) 80%,
-    rgba(0,0,0,0.95) 100%
+    transparent 35%,
+    rgba(0,0,0,0.8) 72%,
+    rgba(0,0,0,0.97) 100%
   );
+  z-index: 1;
+}
+
+/* Video controls pill — top right */
+.ai-card__controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  padding: 6px 10px;
+}
+
+.ai-card__play,
+.ai-card__mute {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+.ai-card__play:hover,
+.ai-card__mute:hover { opacity: 1; }
+
+.ai-card__duration {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .ai-card__text {
@@ -1706,7 +1769,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   .hero__sub { font-size: 18px; }
   .hero__ai-label { display: none; }
 
-  .models { height: 600px; }
+  .models__stage { height: 700px; }
 
   .features__layout { grid-template-columns: 360px 1fr; }
   .features__icon { width: 100px; height: 100px; }
@@ -1762,8 +1825,10 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
     grid-template-columns: 1fr;
     height: auto;
   }
-  .models__left { height: 380px; }
-  .models__right { grid-template-columns: 1fr 1fr; grid-template-rows: none; height: 240px; }
+  .models__stage { height: 540px; }
+  .models__card--left { width: 60%; }
+  .models__card--top-right { width: 22%; }
+  .models__card--bottom-right { width: 25%; }
 
   /* Features */
   .features { padding: 72px 0; }
@@ -1816,7 +1881,8 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
    ============================================ */
 @media (max-width: 480px) {
   .hero__heading { font-size: clamp(34px, 12vw, 56px); }
-  .models__left { height: 300px; }
-  .models__right { height: 200px; }
+  .models__stage { height: 360px; }
+  .models__card--top-right { top: 60px; }
+  .models__card--bottom-right { top: 160px; }
   .ugc-grid { grid-template-columns: 1fr 1fr; }
 }
