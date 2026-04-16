@@ -1747,19 +1747,48 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   margin-left: auto;
 }
 
-/* Stats row */
+/* Stats — column by default, row only on wide desktop */
 .reviews__stats {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 48px;
+  width: 100%;
+  box-sizing: border-box;
   border-top: 1px solid rgba(255,255,255,0.07);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  padding: 40px 0;
+  padding: 32px 16px;
+  gap: 0;
 }
 .reviews__stat {
+  width: 100%;
   text-align: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.reviews__stat:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+@media (min-width: 1025px) {
+  .reviews__stats {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .reviews__stat {
+    width: auto;
+    flex-shrink: 0;
+    border-bottom: none;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
+  .reviews__stat:last-child {
+    border-right: none;
+    border-bottom: none;
+  }
 }
 
 .reviews__stat-val {
@@ -2263,29 +2292,6 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   /* Reviews */
   .reviews { padding: 72px 0; }
   .reviews__cards { grid-template-columns: 1fr; gap: 16px; }
-  .reviews__stats {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 32px 16px;
-    gap: 0;
-    border-left: none;
-    border-right: none;
-  }
-  .reviews__stat {
-    width: 100%;
-    flex-shrink: 1;
-    text-align: center;
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 20px 0;
-    box-sizing: border-box;
-  }
-  .reviews__stat:last-child {
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding-bottom: 20px;
-  }
   .reviews__stat-val { font-size: 28px; }
   .reviews__stat-label { font-size: 11px; }
 
