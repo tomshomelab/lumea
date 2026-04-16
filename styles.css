@@ -813,6 +813,9 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   flex-shrink: 0;
 }
 
+/* Mobile-only pill chips — hidden on desktop */
+.features__callout-chips { display: none; }
+
 /* AI Controlled cards — large panel style */
 .ai-cards {
   display: grid;
@@ -2224,40 +2227,42 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   /* Features */
   .features { padding: 72px 0; }
   .features__layout { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
-  .features__product { height: 480px; overflow: visible; }
-
-  /* Right-align the product image so callouts have room on the left */
+  /* Product image: full-width, static — chips below replace overlaid callouts */
+  .features__product { height: auto; overflow: visible; }
   .features__product-img {
-    position: absolute;
-    right: -16px;
-    left: auto;
-    top: 0;
-    width: 58%;
-    height: 100%;
+    position: static;
+    width: 100%;
+    height: 340px;
     object-fit: cover;
     object-position: center top;
     border-radius: 12px;
   }
 
-  /* Hide all callouts by default, then re-show left ones */
+  /* Hide all overlaid callouts on mobile */
   .features__callout { display: none; }
+  .features__callout--l { display: none; }
   .features__callout--r { display: none; }
-  .features__callout--l {
+
+  /* Mobile pill chips below the image */
+  .features__callout-chips {
     display: flex;
-    right: 54%; /* right edge aligns with image left edge */
-    left: auto;
-    flex-direction: row; /* label → line → image */
+    flex-wrap: wrap;
     gap: 8px;
+    margin-top: 14px;
+    justify-content: center;
+  }
+  .features__callout-chips span {
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    padding: 5px 14px;
+    background: rgba(255,255,255,0.06);
     white-space: nowrap;
   }
-  .features__callout--l .features__callout-label {
-    font-size: 11px;
-    white-space: normal;
-    max-width: 100px;
-    text-align: right;
-    line-height: 1.25;
-  }
-  .features__callout-line { width: 28px; }
   .features__intro { gap: 12px; margin-bottom: 36px; }
   .features__title-white { font-size: 32px; }
   .features__title-gradient { font-size: 30px; }
