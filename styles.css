@@ -141,7 +141,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 
 .nav__top-inner {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1290px;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
