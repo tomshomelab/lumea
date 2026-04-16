@@ -183,9 +183,10 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   display: block;
 }
 
-/* Search — takes all remaining space */
+/* Search — takes remaining space but capped */
 .nav__search {
   flex: 1;
+  max-width: 550px;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -299,8 +300,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   padding: 0 24px;
   display: flex;
   align-items: center;
-  width: max-content;
-  min-width: 100%;
+  justify-content: center;
 }
 
 .nav__cat {
