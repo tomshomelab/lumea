@@ -1056,6 +1056,177 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 }
 
 /* ============================================
+   CTA BANNER — "Let's Create Your Next Best Look"
+   ============================================ */
+.cta-banner {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background layers */
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.cta-banner__bg-img {
+  width: 136%;
+  height: 138%;
+  max-width: none;
+  object-fit: cover;
+  position: absolute;
+  top: -11%;
+  left: -36%;
+  display: block;
+}
+.cta-banner__overlay-pink {
+  position: absolute;
+  inset: 0;
+  background: rgba(217, 41, 193, 0.92);
+  mix-blend-mode: soft-light;
+}
+.cta-banner__overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+/* Content */
+.cta-banner__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 128px 0;
+  gap: 0;
+}
+
+.cta-banner__inner .eyebrow-row {
+  margin-bottom: 28px;
+  justify-content: center;
+}
+
+/* Heading */
+.cta-banner__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.0;
+  letter-spacing: -0.023em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.cta-banner__heading-top {
+  font-family: 'Poltawski Nowy', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(48px, 6.5vw, 79px);
+  line-height: 1.06;
+  color: var(--white);
+  display: block;
+}
+
+.cta-banner__heading-bottom {
+  font-family: 'Poltawski Nowy', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(46px, 6.4vw, 78px);
+  line-height: 1.06;
+  display: block;
+  background: linear-gradient(90deg,
+    rgb(168,101,255) 0%,
+    rgb(255,111,181) 50%,
+    rgb(74,222,255) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-banner__best {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 4px;
+  font-style: italic;
+}
+
+/* Sub */
+.cta-banner__sub {
+  font-family: var(--font-sec);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 540px;
+  line-height: 2.03;
+  margin-bottom: 52px;
+}
+
+/* Buttons */
+.cta-banner__btns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-banner__btn-shop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 179px;
+  height: 56px;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-sec);
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  transition: opacity 0.2s, transform 0.2s var(--ease-out);
+}
+.cta-banner__btn-shop:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.cta-banner__btn-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 56px;
+  padding: 10px 16px;
+  border: 2px solid #f6339a;
+  border-radius: 4px;
+  color: #f6339a;
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 18px;
+  transition: background 0.2s, transform 0.2s var(--ease-out);
+}
+.cta-banner__btn-cart:hover {
+  background: rgba(246, 51, 154, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-banner { min-height: 480px; }
+  .cta-banner__inner { padding: 80px 0; }
+  .cta-banner__bg-img { width: 180%; left: -40%; }
+  .cta-banner__btns { flex-direction: column; align-items: center; }
+  .cta-banner__btn-shop,
+  .cta-banner__btn-cart { width: 220px; }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
