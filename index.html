@@ -19,7 +19,7 @@
 
         <!-- Flag -->
         <div class="nav__flag-wrap">
-          <img src="https://www.figma.com/api/mcp/asset/f1dabc8b-be05-4401-820e-82aceedd9e8b" alt="UK" class="nav__flag-img" />
+          <img src="https://flagcdn.com/gb.svg" alt="UK" class="nav__flag-img" />
           <svg width="8" height="10" viewBox="0 0 8 10" fill="none" style="transform:rotate(-90deg)"><path d="M1 1l3 3 3-3" stroke="rgba(255,255,255,0.6)" stroke-width="1.4" stroke-linecap="round"/></svg>
         </div>
 
@@ -42,6 +42,14 @@
             <span class="nav__loc-val">Shropshire</span>
           </div>
         </div>
+
+        <!-- Search icon (mobile only) -->
+        <button class="nav__icon-btn nav__icon-btn--search-m" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8.5" cy="8.5" r="5.5" stroke="white" stroke-width="1.6"/>
+            <line x1="12.7" y1="13.3" x2="17" y2="17.6" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
 
         <!-- Account / Wishlist / Cart -->
         <button class="nav__icon-btn" aria-label="Account">
@@ -161,7 +169,6 @@
           <!-- KPF heading -->
           <div class="features__kpf">
             <p class="features__kpf-title">Key Product Features</p>
-            <p class="features__kpf-sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
           </div>
 
           <!-- Left list + Right annotated product image -->
@@ -204,19 +211,19 @@
               <img src="https://www.figma.com/api/mcp/asset/871b1cf2-ffcf-4cdb-9858-fd6c9c3bc01c" alt="Lumea AI hair dryer annotated" class="features__product-img" />
               <!-- Callout annotations -->
               <div class="features__callout features__callout--r" style="top:41%">
-                <span class="features__callout-line"></span><span class="features__callout-label">Shine Enhancer</span>
+                <span class="features__callout-line"></span><span class="features__callout-label">Backup Heat Control</span>
               </div>
               <div class="features__callout features__callout--r" style="top:89%">
-                <span class="features__callout-line"></span><span class="features__callout-label">Ionic Technology</span>
+                <span class="features__callout-line"></span><span class="features__callout-label">Tangle Free Cable</span>
               </div>
               <div class="features__callout features__callout--l" style="top:26%">
-                <span class="features__callout-label">Smart Heat Control</span><span class="features__callout-line"></span>
+                <span class="features__callout-label">Easy Control</span><span class="features__callout-line"></span>
               </div>
               <div class="features__callout features__callout--l" style="top:57%">
-                <span class="features__callout-label">Lightning Fast</span><span class="features__callout-line"></span>
+                <span class="features__callout-label">Aerospace-Grade Body</span><span class="features__callout-line"></span>
               </div>
               <div class="features__callout features__callout--l" style="top:89%">
-                <span class="features__callout-label">Cool Shot</span><span class="features__callout-line"></span>
+                <span class="features__callout-label">AI Automated Cool Shot</span><span class="features__callout-line"></span>
               </div>
             </div>
 
@@ -446,6 +453,7 @@
 
     <!-- ======= BRING THE FUTURE OF HAIRCARE HOME ======= -->
     <section class="haircare-home" id="haircare-home">
+      <!-- Header stays inside the container -->
       <div class="container">
         <div class="haircare-home__header">
           <div class="eyebrow-row">
@@ -460,38 +468,74 @@
           <p class="haircare-home__sub">Elevate your routine with a hair dryer that's as smart and stylish as you are. Experience the difference today</p>
           <a href="#" class="btn-shop-now">Shop Now</a>
         </div>
-
         <p class="haircare-home__label"><em>See Lumea In Action</em></p>
+      </div>
 
-        <div class="haircare-home__panels">
-          <!-- Left panel (faded) -->
-          <div class="haircare-home__panel haircare-home__panel--side">
-            <img src="https://www.figma.com/api/mcp/asset/5cf5735c-1510-45fd-8f24-185114bccb9e" alt="" class="haircare-home__panel-img" />
-            <div class="haircare-home__panel-content">
-              <p class="haircare-home__panel-title">AI Features</p>
-              <p class="haircare-home__panel-sub">Consistent Style</p>
-              <button class="btn-read-more">READ MORE</button>
+      <!-- Carousel viewport sits outside the container so it bleeds full-width -->
+      <div class="hcarousel">
+        <div class="hcarousel__viewport">
+          <div class="hcarousel__track" id="hcarouselTrack">
+
+            <div class="hcarousel__slide" data-index="0">
+              <div class="hcarousel__card">
+                <img src="https://www.figma.com/api/mcp/asset/5cf5735c-1510-45fd-8f24-185114bccb9e" alt="AI Precision" class="hcarousel__img" />
+                <div class="hcarousel__caption">
+                  <p class="hcarousel__slide-title">AI Precision</p>
+                  <p class="hcarousel__slide-sub">Smart heat adapts in real-time to protect every strand.</p>
+                  <button class="btn-read-more">READ MORE</button>
+                </div>
+              </div>
             </div>
+
+            <div class="hcarousel__slide" data-index="1">
+              <div class="hcarousel__card">
+                <img src="https://www.figma.com/api/mcp/asset/ef19cd7c-f611-44ca-936f-d5b83a95ef3f" alt="Consistent Style" class="hcarousel__img" />
+                <div class="hcarousel__caption">
+                  <p class="hcarousel__slide-title">Consistent Style</p>
+                  <p class="hcarousel__slide-sub">Salon-quality results from the comfort of home, every time.</p>
+                  <button class="btn-read-more">READ MORE</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="hcarousel__slide" data-index="2">
+              <div class="hcarousel__card">
+                <img src="https://www.figma.com/api/mcp/asset/5cf5735c-1510-45fd-8f24-185114bccb9e" alt="Ionic Technology" class="hcarousel__img" />
+                <div class="hcarousel__caption">
+                  <p class="hcarousel__slide-title">Ionic Technology</p>
+                  <p class="hcarousel__slide-sub">Frizz-free, glossy results with every use — no compromises.</p>
+                  <button class="btn-read-more">READ MORE</button>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <!-- Centre panel (prominent) -->
-          <div class="haircare-home__panel haircare-home__panel--main">
-            <img src="https://www.figma.com/api/mcp/asset/ef19cd7c-f611-44ca-936f-d5b83a95ef3f" alt="Model using Lumea" class="haircare-home__panel-img" />
-            <div class="haircare-home__panel-content">
-              <p class="haircare-home__panel-title">AI Features</p>
-              <p class="haircare-home__panel-sub">Consistent Style</p>
-              <button class="btn-read-more">READ MORE</button>
-            </div>
-          </div>
-          <!-- Right panel (faded) -->
-          <div class="haircare-home__panel haircare-home__panel--side">
-            <img src="https://www.figma.com/api/mcp/asset/5cf5735c-1510-45fd-8f24-185114bccb9e" alt="" class="haircare-home__panel-img" />
-            <div class="haircare-home__panel-content">
-              <p class="haircare-home__panel-title">AI Features</p>
-              <p class="haircare-home__panel-sub">Consistent Style</p>
-              <button class="btn-read-more">READ MORE</button>
-            </div>
+
+          <button class="hcarousel__arrow hcarousel__arrow--prev" id="hcarouselPrev" aria-label="Previous">&#8249;</button>
+          <button class="hcarousel__arrow hcarousel__arrow--next" id="hcarouselNext" aria-label="Next">&#8250;</button>
+        </div>
+
+        <div class="hcarousel__indicators-wrap">
+          <div class="hcarousel__indicators" id="hcarouselDots">
+            <button class="hcarousel__dot" data-dot="0" aria-label="Slide 1"></button>
+            <button class="hcarousel__dot hcarousel__dot--active" data-dot="1" aria-label="Slide 2"></button>
+            <button class="hcarousel__dot" data-dot="2" aria-label="Slide 3"></button>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ======= PRODUCT CTA BANNER ======= -->
+    <section class="product-cta">
+      <!-- Background: scattered hairdryer parts photo + dark overlay -->
+      <div class="product-cta__bg">
+        <img src="https://www.figma.com/api/mcp/asset/020f8723-4a40-439e-8b8c-4e45a8f5c2d9" alt="" class="product-cta__img" />
+        <div class="product-cta__overlay"></div>
+      </div>
+      <!-- Centred content -->
+      <div class="product-cta__content">
+        <p class="product-cta__heading">Get your Lumea hairdryer today</p>
+        <a href="#" class="product-cta__btn">Add to Cart</a>
       </div>
     </section>
 
@@ -511,58 +555,86 @@
           <p class="reviews__sub">See what our community is saying about their Lumea experience.</p>
         </div>
 
+        <!-- Air texture pattern images (background_1 + Background 2 from Figma) -->
+        <div class="reviews__textures" aria-hidden="true">
+          <img src="https://www.figma.com/api/mcp/asset/ce5d3390-24a7-4f40-bcdd-a40f7f06a78e" class="reviews__texture reviews__texture--1" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/ce5d3390-24a7-4f40-bcdd-a40f7f06a78e" class="reviews__texture reviews__texture--2" alt="" />
+        </div>
+
         <div class="reviews__cards">
+
+          <!-- Review 1 — Instagram -->
           <div class="reviews__card">
-            <div class="reviews__stars">
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+            <div class="reviews__card-top">
+              <div class="reviews__stars">
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+              </div>
+              <!-- Instagram icon -->
+              <svg class="reviews__app-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="Instagram">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </div>
-            <p class="reviews__quote">"Game changer! My hair has never looked this good."</p>
+            <p class="reviews__quote">"My hair has never looked this good &ndash; it&rsquo;s like magic!"</p>
             <div class="reviews__author">
               <div class="reviews__avatar-wrap">
-                <img src="https://www.figma.com/api/mcp/asset/45d00134-0343-4302-b232-8ca36844d7b1" alt="@sophiastyle" class="reviews__avatar" />
+                <div class="reviews__avatar-initial" style="background: linear-gradient(135deg,#A865FF,#E84C9A)">F</div>
               </div>
-              <span class="reviews__handle">@sophiastyle</span>
-              <img src="https://www.figma.com/api/mcp/asset/d9bf73e9-bd73-4035-a91e-6dd188d88759" alt="" class="reviews__heart" />
+              <span class="reviews__handle">@fashionista23</span>
             </div>
           </div>
+
+          <!-- Review 2 — TikTok -->
           <div class="reviews__card">
-            <div class="reviews__stars">
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+            <div class="reviews__card-top">
+              <div class="reviews__stars">
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+              </div>
+              <!-- TikTok icon -->
+              <svg class="reviews__app-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="TikTok">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.23 8.23 0 004.83 1.55V6.79a4.85 4.85 0 01-1.06-.1z"/>
+              </svg>
             </div>
-            <p class="reviews__quote">"Game changer! My hair has never looked this good."</p>
+            <p class="reviews__quote">"Finally, a hair dryer that understands me and my style."</p>
             <div class="reviews__author">
               <div class="reviews__avatar-wrap">
-                <img src="https://www.figma.com/api/mcp/asset/45d00134-0343-4302-b232-8ca36844d7b1" alt="@sophiastyle" class="reviews__avatar" />
+                <div class="reviews__avatar-initial" style="background: linear-gradient(135deg,#E84C9A,#4ADEFF)">T</div>
               </div>
-              <span class="reviews__handle">@sophiastyle</span>
-              <img src="https://www.figma.com/api/mcp/asset/d9bf73e9-bd73-4035-a91e-6dd188d88759" alt="" class="reviews__heart" />
+              <span class="reviews__handle">@trendqueen</span>
             </div>
           </div>
+
+          <!-- Review 3 — App Store -->
           <div class="reviews__card">
-            <div class="reviews__stars">
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
-              <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+            <div class="reviews__card-top">
+              <div class="reviews__stars">
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+                <img src="https://www.figma.com/api/mcp/asset/a08c6567-92f5-42db-87e9-a16ff42ee0bf" alt="★" class="reviews__star" />
+              </div>
+              <!-- App Store icon -->
+              <svg class="reviews__app-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="App Store">
+                <path d="M8.809 0c-.26.01-.689.106-1.282.396A5.084 5.084 0 005.61 2.313c-.585.872-.784 1.745-.784 2.406.661.023 1.32-.138 1.925-.459a4.867 4.867 0 001.73-1.723A4.71 4.71 0 009.138.127 6.237 6.237 0 008.809 0zm6.401 0c-.043.713-.21 1.421-.502 2.07a4.867 4.867 0 01-1.73 1.723 4.867 4.867 0 01-1.925.46c0-.661.198-1.534.784-2.406A5.084 5.084 0 0113.754.395C14.346.105 14.776.01 15.037 0h.173zM12 5.5C8.91 5.5 6 8.7 6 12.17c0 3.47 2.13 7.44 4.63 9.35.57.43 1.06.48 1.63.48.57 0 1.06-.14 1.61-.48C16.39 19.6 18 15.64 18 12.17 18 8.7 15.09 5.5 12 5.5z"/>
+              </svg>
             </div>
-            <p class="reviews__quote">"Game changer! My hair has never looked this good."</p>
+            <p class="reviews__quote">"Sleek, light, and brilliant &ndash; I can&rsquo;t imagine going back."</p>
             <div class="reviews__author">
               <div class="reviews__avatar-wrap">
-                <img src="https://www.figma.com/api/mcp/asset/45d00134-0343-4302-b232-8ca36844d7b1" alt="@sophiastyle" class="reviews__avatar" />
+                <div class="reviews__avatar-initial" style="background: linear-gradient(135deg,#4ADEFF,#A865FF)">S</div>
               </div>
-              <span class="reviews__handle">@sophiastyle</span>
-              <img src="https://www.figma.com/api/mcp/asset/d9bf73e9-bd73-4035-a91e-6dd188d88759" alt="" class="reviews__heart" />
+              <span class="reviews__handle">@styleguru</span>
             </div>
           </div>
+
         </div>
 
         <div class="reviews__stats">
