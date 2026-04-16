@@ -172,7 +172,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 .nav__logo-img-wrap {
   flex-shrink: 0;
   padding: 0 15px;
-  width: 220px;
+  width: 160px;
   display: flex;
   align-items: center;
 }
@@ -1642,14 +1642,14 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   user-select: none;
   object-fit: cover;
 }
-/* background_asset right: anchored to right edge, opacity 23% (Figma node 181:419) */
+/* background_asset right: anchored to right edge, opacity 12% (Figma node 181:419, reduced 50%) */
 .reviews__texture--1 {
   right: 0;
   left: auto;
   top: 17px;
   width: 73%;
   height: 90%;
-  opacity: 0.23;
+  opacity: 0.12;
 }
 /* background_asset left: anchored to left edge, rotated 180deg, opacity 33% (Figma node 181:420) */
 .reviews__texture--2 {
@@ -2004,17 +2004,14 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 }
 
 /* Brand column */
-.footer__logo {
-  font-family: var(--font-main);
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: block;
+.footer__logo-wrap {
+  display: inline-block;
   margin-bottom: 14px;
+}
+.footer__logo-img {
+  width: 160px;
+  height: auto;
+  display: block;
 }
 
 .footer__tagline {
@@ -2090,7 +2087,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   :root { --nav-h1: 60px; --nav-h2: 44px; --nav-total: 104px; }
 
   .nav__location { display: none; }
-  .nav__logo-img-wrap { width: 170px; }
+  .nav__logo-img-wrap { width: 130px; }
 
   .hero__content { max-width: 100%; }
   .hero__heading { font-size: clamp(38px, 5vw, 58px); }
