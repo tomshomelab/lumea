@@ -255,47 +255,55 @@
         </div>
       </div>
 
-      <!-- Track (overflows viewport intentionally) -->
+      <!-- Track + arrows all inside the viewport wrapper -->
       <div class="pcarousel__viewport">
         <div class="pcarousel__track" id="pcarouselTrack">
 
           <div class="pcarousel__slide" data-index="0">
             <div class="pcarousel__card">
-              <img src="https://www.figma.com/api/mcp/asset/43f42faf-6cf2-44fc-bc94-21c3dd08d956" alt="Lumea style 1" class="pcarousel__img" />
+              <img src="https://www.figma.com/api/mcp/asset/43f42faf-6cf2-44fc-bc94-21c3dd08d956" alt="Lumea Precision Sensing" class="pcarousel__img" />
+              <div class="pcarousel__slide-caption">
+                <h3 class="pcarousel__slide-title">Precision Sensing</h3>
+                <p class="pcarousel__slide-sub">Advanced sensors analyse your hair type in real-time, customising temperature and airflow before you even start.</p>
+              </div>
             </div>
           </div>
 
           <div class="pcarousel__slide" data-index="1">
             <div class="pcarousel__card">
               <img src="https://www.figma.com/api/mcp/asset/5258972d-4641-46c3-bd66-1f9d07e72cde" alt="Lumea AI Controlled" class="pcarousel__img" />
+              <div class="pcarousel__slide-caption">
+                <h3 class="pcarousel__slide-title">AI Controlled</h3>
+                <p class="pcarousel__slide-sub">Machine learning adapts heat and airflow in real-time based on hair texture, density, and moisture levels.</p>
+              </div>
             </div>
           </div>
 
           <div class="pcarousel__slide" data-index="2">
             <div class="pcarousel__card">
-              <img src="https://www.figma.com/api/mcp/asset/0cf36df9-2b32-4196-9896-4075f52c267a" alt="Lumea style 3" class="pcarousel__img" />
+              <img src="https://www.figma.com/api/mcp/asset/0cf36df9-2b32-4196-9896-4075f52c267a" alt="Lumea Perfect Finish" class="pcarousel__img" />
+              <div class="pcarousel__slide-caption">
+                <h3 class="pcarousel__slide-title">Perfect Finish</h3>
+                <p class="pcarousel__slide-sub">Consistent, salon-quality results every time — smooth, frizz-free hair that lasts all day.</p>
+              </div>
             </div>
           </div>
 
         </div>
+
+        <!-- Arrows sit over the cards -->
+        <button class="pcarousel__arrow pcarousel__arrow--prev" id="pcarouselPrev" aria-label="Previous">&#8249;</button>
+        <button class="pcarousel__arrow pcarousel__arrow--next" id="pcarouselNext" aria-label="Next">&#8250;</button>
       </div>
 
-      <!-- Caption + indicator (below active slide) -->
-      <div class="container">
-        <div class="pcarousel__caption">
-          <h3 class="pcarousel__caption-title">AI Controlled</h3>
-          <p class="pcarousel__caption-sub">Machine learning adapts heat and airflow in real-time based on hair texture, density, and moisture levels</p>
-          <div class="pcarousel__indicators" id="pcarouselDots">
-            <button class="pcarousel__dot" data-dot="0" aria-label="Slide 1"></button>
-            <button class="pcarousel__dot" data-dot="1" aria-label="Slide 2"></button>
-            <button class="pcarousel__dot pcarousel__dot--active" data-dot="2" aria-label="Slide 3"></button>
-          </div>
+      <!-- Indicator bars below the carousel -->
+      <div class="pcarousel__indicators-wrap">
+        <div class="pcarousel__indicators" id="pcarouselDots">
+          <button class="pcarousel__dot" data-dot="0" aria-label="Slide 1"></button>
+          <button class="pcarousel__dot pcarousel__dot--active" data-dot="1" aria-label="Slide 2"></button>
+          <button class="pcarousel__dot" data-dot="2" aria-label="Slide 3"></button>
         </div>
       </div>
-
-      <!-- Prev / Next arrows -->
-      <button class="pcarousel__arrow pcarousel__arrow--prev" id="pcarouselPrev" aria-label="Previous">&#8249;</button>
-      <button class="pcarousel__arrow pcarousel__arrow--next" id="pcarouselNext" aria-label="Next">&#8250;</button>
     </section>
 
     <!-- ======= TREND SETTERS ======= -->
