@@ -76,6 +76,51 @@ if (playBtn) {
   });
 }
 
+/* ---------- Product Carousel ---------- */
+(function () {
+  const track    = document.getElementById('pcarouselTrack');
+  const prevBtn  = document.getElementById('pcarouselPrev');
+  const nextBtn  = document.getElementById('pcarouselNext');
+  const dots     = document.querySelectorAll('#pcarouselDots .pcarousel__dot');
+  if (!track) return;
+
+  const slides   = track.querySelectorAll('.pcarousel__slide');
+  const total    = slides.length;
+  let current    = 1; // start on middle slide
+  const GAP      = 24;
+
+  function getOffset() {
+    const vw         = track.parentElement.offsetWidth;
+    const slideW     = slides[0].offsetWidth;
+    const centreLeft = (vw - slideW) / 2;
+    return centreLeft - current * (slideW + GAP);
+  }
+
+  function go(index) {
+    current = Math.max(0, Math.min(total - 1, index));
+    track.style.transform = `translateX(${getOffset()}px)`;
+    dots.forEach((d, i) => d.classList.toggle('pcarousel__dot--active', i === current));
+  }
+
+  // init
+  go(1);
+
+  prevBtn.addEventListener('click', () => go(current - 1));
+  nextBtn.addEventListener('click', () => go(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.dot)));
+
+  // recalc on resize
+  window.addEventListener('resize', () => go(current), { passive: true });
+
+  // touch / swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) go(diff > 0 ? current + 1 : current - 1);
+  });
+})();
+
 /* ---------- Nav active category on scroll ---------- */
 const sections = document.querySelectorAll('main section[id]');
 const catLinks = document.querySelectorAll('.nav__cat');

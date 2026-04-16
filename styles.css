@@ -823,6 +823,172 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 }
 
 /* ============================================
+   PRODUCT CAROUSEL
+   ============================================ */
+.pcarousel {
+  position: relative;
+  padding: 38px 0 64px;
+  background: linear-gradient(to bottom, #0b0b0b, transparent);
+  overflow: hidden;
+}
+
+.pcarousel__glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  top: 879px; right: -200px;
+  border-radius: 50%;
+  background: rgba(152, 16, 250, 0.2);
+  filter: blur(64px);
+  opacity: 0.67;
+  pointer-events: none;
+}
+
+/* Heading */
+.pcarousel__header {
+  text-align: center;
+  padding: 24px 37px 31px;
+  margin-bottom: 8px;
+}
+.pcarousel__title {
+  font-family: var(--font-sec);
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.pcarousel__sub {
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.625;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Carousel viewport — clips sides */
+.pcarousel__viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track — 3 cards in a flex row, transitions on slide */
+.pcarousel__track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Each slide */
+.pcarousel__slide {
+  flex-shrink: 0;
+  width: 85vw;
+  max-width: 1090px;
+}
+
+/* Card styling */
+.pcarousel__card {
+  background: #000101;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 620px;
+}
+
+.pcarousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  pointer-events: none;
+}
+
+/* Caption below carousel */
+.pcarousel__caption {
+  text-align: center;
+  padding: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.pcarousel__caption-title {
+  font-family: var(--font-sec);
+  font-size: 36px;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.25;
+}
+.pcarousel__caption-sub {
+  font-family: var(--font-sec);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.625;
+  max-width: 476px;
+}
+
+/* Indicator bars */
+.pcarousel__indicators {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 19px 0;
+}
+.pcarousel__dot {
+  width: 90px;
+  height: 3px;
+  border-radius: 2px;
+  background: #2d2d2d;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s;
+}
+.pcarousel__dot--active {
+  background: #88cef2;
+}
+
+/* Prev / Next arrows */
+.pcarousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  font-size: 28px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.pcarousel__arrow:hover { background: rgba(255, 255, 255, 0.2); }
+.pcarousel__arrow--prev { left: 16px; }
+.pcarousel__arrow--next { right: 16px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pcarousel__slide { width: 88vw; }
+  .pcarousel__card { height: 380px; }
+  .pcarousel__title, .pcarousel__caption-title { font-size: 26px; }
+  .pcarousel__sub { font-size: 17px; }
+  .pcarousel__dot { width: 60px; }
+}
+
+/* ============================================
    TREND SETTERS
    ============================================ */
 .trendsetters {
