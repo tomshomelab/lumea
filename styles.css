@@ -300,19 +300,23 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .nav__cat {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1;
   height: var(--nav-h2);
-  padding: 0 14px;
-  font-size: 13px;
-  font-weight: 600;
+  padding: 0 4px;
+  font-size: 12.8px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
   white-space: nowrap;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.9);
   border-bottom: 2px solid transparent;
+  letter-spacing: 0.5px;
   transition: color 0.2s, border-color 0.2s;
   cursor: pointer;
 }
