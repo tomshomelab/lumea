@@ -1097,10 +1097,11 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   align-items: start;
 }
 .trendsetters__title {
-  font-size: clamp(44px, 5.5vw, 80px);
+  font-size: clamp(32px, 5.5vw, 80px);
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
   grid-column: 1;
   grid-row: 1;
 }
@@ -1239,6 +1240,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 .eyebrow-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   margin-bottom: 20px;
 }
@@ -1836,6 +1838,8 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   .features__product { height: 420px; }
   .features__callout { display: none; }
   .features__icon { width: 80px; height: 80px; }
+  .features__sub { font-size: 17px; }
+  .features__kpf-sub { font-size: 17px; }
   .ai-cards { grid-template-columns: 1fr; }
   .ai-card { height: 420px; }
 
