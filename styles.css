@@ -411,7 +411,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 
 .hero__heading {
   font-family: var(--font-main);
-  font-size: clamp(44px, 4.7vw, 68px);
+  font-size: clamp(36px, 4.2vw, 52px);
   font-weight: 800;
   line-height: 0.88;          /* Figma: leading-84px at 112px = 0.75, loosen for readability */
   letter-spacing: -1.8px;     /* Figma: tracking -1.8px */
@@ -1767,7 +1767,7 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   .nav__logo-img-wrap { width: 170px; }
 
   .hero__content { max-width: 100%; }
-  .hero__heading { font-size: clamp(38px, 5vw, 64px); }
+  .hero__heading { font-size: clamp(34px, 4.5vw, 52px); }
   .hero__sub { font-size: 18px; }
   .hero__ai-label { display: none; }
 
