@@ -183,11 +183,13 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   display: block;
 }
 
-/* Search — takes all remaining space between logo and location */
+/* Search — centred, capped width */
 .nav__search {
   flex: 1;
   display: flex;
   align-items: center;
+  max-width: 420px;
+  margin: 0 auto;
   background: #ffffff;
   border: 1px solid #bdbdbd;
   border-radius: 50px;
