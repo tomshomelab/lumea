@@ -784,12 +784,19 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
 }
 .features__callout-label {
   font-family: var(--font-main);
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   font-style: italic;
   color: var(--white);
-  line-height: 1.0;
-  white-space: nowrap;
+  line-height: 1.25;
+  white-space: normal;
+  max-width: 110px;
+}
+.features__callout--l .features__callout-label {
+  text-align: right;
+}
+.features__callout--r .features__callout-label {
+  text-align: left;
 }
 .features__callout-line {
   display: block;
