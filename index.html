@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumea — Intelligent Beauty. Effortless Style.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAV ======= -->
+  <header class="nav" id="nav">
+
+    <!-- Top utility bar -->
+    <div class="nav__top">
+      <div class="nav__top-inner">
+        <!-- Left: country flag -->
+        <div class="nav__flag">
+          <div class="nav__flag-icon"></div>
+          <span>UK</span>
+          <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+
+        <!-- Centre: Logo -->
+        <a href="#" class="nav__logo">LUMEA</a>
+
+        <!-- Right: search + icons -->
+        <div class="nav__right">
+          <div class="nav__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search" aria-label="Search" />
+          </div>
+
+          <div class="nav__location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l7 7m0 0l7-7M10 10v4m0 0h4m-4 0H6"/></svg>
+            <div>
+              <span class="nav__location-label">Stores &amp; services</span>
+              <span class="nav__location-val">Shropshire</span>
+            </div>
+          </div>
+
+          <button class="nav__icon-btn" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <button class="nav__icon-btn" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </button>
+          <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom category nav -->
+    <nav class="nav__cats" aria-label="Product categories">
+      <div class="nav__cats-inner">
+        <a href="#" class="nav__cat">Brands</a>
+        <a href="#" class="nav__cat">Makeup Offers</a>
+        <a href="#" class="nav__cat">New &amp; Trending</a>
+        <a href="#" class="nav__cat">Makeup</a>
+        <a href="#" class="nav__cat">Fragrance</a>
+        <a href="#" class="nav__cat">Skincare</a>
+        <a href="#" class="nav__cat">Hair</a>
+        <a href="#" class="nav__cat">K Beauty</a>
+        <a href="#" class="nav__cat">Body</a>
+        <a href="#" class="nav__cat nav__cat--active">AI Hairdryer</a>
+        <a href="#" class="nav__cat">Minis</a>
+        <a href="#" class="nav__cat">Offers</a>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="navDrawer">
+      <a href="#features">Features</a>
+      <a href="#technology">Technology</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#shop" class="pink">Shop Now</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__glow hero__glow--3"></div>
+        <div class="hero__particles" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content fade-up">
+        <p class="hero__eyebrow">AI-Powered / Intelligent Heat</p>
+        <h1 class="hero__heading">
+          <span class="hero__heading--white">Intelligent Beauty.</span>
+          <span class="hero__heading--gradient">Effortless&nbsp;Style.</span>
+        </h1>
+        <p class="hero__sub">
+          Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.
+        </p>
+        <div class="hero__actions">
+          <a href="#shop" class="btn btn--primary">Shop Now</a>
+          <a href="#features" class="btn btn--ghost">Discover&nbsp;More</a>
+        </div>
+      </div>
+
+      <div class="hero__ai-label">
+        <span class="hero__ai-dot"></span>
+        AI-Powered / Intelligent Heat
+      </div>
+
+      <div class="hero__scroll">
+        <span>Scroll to explore</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ======= BRAND BAR (marquee) ======= -->
+    <div class="brand-bar" aria-hidden="true">
+      <div class="brand-bar__track">
+        <span>AI-Powered Heat Control</span><span class="brand-bar__dot">·</span>
+        <span>Ionic Technology</span><span class="brand-bar__dot">·</span>
+        <span>Smart Moisture Sensing</span><span class="brand-bar__dot">·</span>
+        <span>3× Faster Drying</span><span class="brand-bar__dot">·</span>
+        <span>Salon-Quality Results</span><span class="brand-bar__dot">·</span>
+        <span>AI-Powered Heat Control</span><span class="brand-bar__dot">·</span>
+        <span>Ionic Technology</span><span class="brand-bar__dot">·</span>
+        <span>Smart Moisture Sensing</span><span class="brand-bar__dot">·</span>
+        <span>3× Faster Drying</span><span class="brand-bar__dot">·</span>
+        <span>Salon-Quality Results</span><span class="brand-bar__dot">·</span>
+      </div>
+    </div>
+
+    <!-- ======= FEATURES — "Designed for Your Hair" ======= -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">
+            <span class="white">DEsignED FOR</span><br/>
+            <span class="gradient-text">YOUR HAIR</span>
+          </h2>
+          <p class="section-sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
+          <a href="#shop" class="btn btn--primary">Shop Now</a>
+        </div>
+
+        <!-- Desktop: product centred with features around it -->
+        <div class="features__layout">
+          <!-- Left column -->
+          <div class="features__col features__col--left">
+            <div class="features__item fade-up">
+              <div class="features__icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="fi1" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fi1)" stroke-width="1.5"/><path d="M24 14c0 0 6 4 6 10s-6 10-6 10" stroke="url(#fi1)" stroke-width="2" stroke-linecap="round"/><path d="M24 14c0 0-6 4-6 10s6 10 6 10" stroke="url(#fi1)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="#EE86C0"/></svg>
+              </div>
+              <div class="features__item-body">
+                <h3>Shine Enhancer</h3>
+                <p>Advanced coating technology boosts natural shine and smoothness with every use.</p>
+              </div>
+            </div>
+            <div class="features__item fade-up">
+              <div class="features__icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="fi2" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fi2)" stroke-width="1.5"/><path d="M16 24h16M24 16v16" stroke="url(#fi2)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="5" stroke="url(#fi2)" stroke-width="1.5"/></svg>
+              </div>
+              <div class="features__item-body">
+                <h3>Ionic Technology</h3>
+                <p>Reduces frizz by 95% while locking in moisture for salon-quality results.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centre: product -->
+          <div class="features__product">
+            <div class="features__product-glow"></div>
+            <svg class="features__dryer" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="dp1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#EE86C0"/><stop offset="100%" stop-color="#A865FF"/></linearGradient>
+                <linearGradient id="dp2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0c0da"/><stop offset="100%" stop-color="#c89fe8"/></linearGradient>
+                <radialGradient id="dp3" cx="35%" cy="30%"><stop offset="0%" stop-color="rgba(255,255,255,0.3)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+              </defs>
+              <!-- Body -->
+              <rect x="30" y="10" width="140" height="190" rx="70" fill="url(#dp1)"/>
+              <!-- Shine -->
+              <rect x="30" y="10" width="140" height="190" rx="70" fill="url(#dp3)"/>
+              <!-- Nozzle -->
+              <rect x="130" y="130" width="80" height="34" rx="12" fill="url(#dp2)" opacity="0.9"/>
+              <!-- Vent slots -->
+              <rect x="56" y="60" width="9" height="50" rx="4.5" fill="rgba(255,255,255,0.25)"/>
+              <rect x="72" y="52" width="9" height="62" rx="4.5" fill="rgba(255,255,255,0.2)"/>
+              <rect x="88" y="46" width="9" height="70" rx="4.5" fill="rgba(255,255,255,0.15)"/>
+              <!-- Handle -->
+              <rect x="88" y="195" width="44" height="110" rx="22" fill="url(#dp1)"/>
+              <!-- Handle shine -->
+              <rect x="88" y="195" width="44" height="110" rx="22" fill="url(#dp3)" opacity="0.5"/>
+              <!-- Button -->
+              <rect x="98" y="260" width="24" height="10" rx="5" fill="rgba(255,255,255,0.4)"/>
+            </svg>
+          </div>
+
+          <!-- Right column -->
+          <div class="features__col features__col--right">
+            <div class="features__item fade-up">
+              <div class="features__icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="fi3" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fi3)" stroke-width="1.5"/><path d="M24 15v5l3 3-3 2v5" stroke="url(#fi3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 20l2.5 2.5M30 20l-2.5 2.5M17 28l2.5-2.5M30 28l-2.5-2.5" stroke="url(#fi3)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="features__item-body">
+                <h3>Smart Heat Control</h3>
+                <p>AI learns your hair type and adjusts temperature in real-time for optimal protection.</p>
+              </div>
+            </div>
+            <div class="features__item fade-up">
+              <div class="features__icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="fi4" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fi4)" stroke-width="1.5"/><path d="M20 14l-4 10h8l-4 10" stroke="url(#fi4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 18l2.5 2.5L30 23M30 25l2.5 2.5L30 30" stroke="url(#fi4)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="features__item-body">
+                <h3>Lightning Fast</h3>
+                <p>Powerful airflow dries hair 3× faster without compromising on gentleness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile fallback: stacked cards -->
+        <div class="features__grid">
+          <div class="features__card fade-up">
+            <div class="features__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48"><defs><linearGradient id="fc1" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fc1)" stroke-width="2"/><path d="M24 14c0 0 6 4 6 10s-6 10-6 10" stroke="url(#fc1)" stroke-width="2" stroke-linecap="round"/><path d="M24 14c0 0-6 4-6 10s6 10 6 10" stroke="url(#fc1)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="3" fill="#EE86C0"/></svg>
+            </div>
+            <h3>Shine Enhancer</h3>
+            <p>Advanced coating technology boosts natural shine and smoothness with every use.</p>
+          </div>
+          <div class="features__card fade-up">
+            <div class="features__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48"><defs><linearGradient id="fc2" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fc2)" stroke-width="2"/><path d="M16 24h16M24 16v16" stroke="url(#fc2)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="5" stroke="url(#fc2)" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Ionic Technology</h3>
+            <p>Reduces frizz by 95% while locking in moisture for salon-quality results.</p>
+          </div>
+          <div class="features__card fade-up">
+            <div class="features__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48"><defs><linearGradient id="fc3" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fc3)" stroke-width="2"/><path d="M24 15v5l3 3-3 2v5" stroke="url(#fc3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Smart Heat Control</h3>
+            <p>AI learns your hair type and adjusts temperature in real-time for optimal protection.</p>
+          </div>
+          <div class="features__card fade-up">
+            <div class="features__icon">
+              <svg viewBox="0 0 48 48" fill="none" width="48" height="48"><defs><linearGradient id="fc4" x1="4" y1="4" x2="44" y2="44"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="24" cy="24" r="20" stroke="url(#fc4)" stroke-width="2"/><path d="M20 14l-4 10h8l-4 10" stroke="url(#fc4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Lightning Fast</h3>
+            <p>Powerful airflow dries hair 3× faster without compromising on gentleness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= TECHNOLOGY — "AI Controlled" ======= -->
+    <section class="technology" id="technology">
+      <div class="container">
+        <div class="technology__inner">
+          <div class="technology__text fade-up">
+            <p class="eyebrow gradient-text">AI Intelligence</p>
+            <h2>
+              <span class="white">AI</span><br/>
+              <span class="gradient-text">Controlled.</span>
+            </h2>
+            <p class="body-text">Machine learning adapts heat and airflow in real-time to your exact hair type and condition. No two drying sessions are the same.</p>
+            <ul class="technology__list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="t1" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#t1)"/><path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Adapts to fine, thick, curly &amp; colour-treated hair
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="t2" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#t2)"/><path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Prevents heat damage with real-time monitoring
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="t3" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#t3)"/><path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Learns and improves with every use
+              </li>
+            </ul>
+            <a href="#shop" class="btn btn--primary">Shop Now</a>
+          </div>
+
+          <div class="technology__visual fade-up">
+            <div class="technology__card">
+              <div class="technology__card-glow"></div>
+              <div class="technology__badge">
+                <span class="technology__badge-pulse"></span>
+                AI Active
+              </div>
+              <div class="technology__stats">
+                <div class="technology__stat">
+                  <span class="technology__stat-value gradient-text">95%</span>
+                  <span class="technology__stat-label">Frizz Reduction</span>
+                </div>
+                <div class="technology__stat">
+                  <span class="technology__stat-value gradient-text">3×</span>
+                  <span class="technology__stat-label">Faster Drying</span>
+                </div>
+                <div class="technology__stat">
+                  <span class="technology__stat-value gradient-text">0°</span>
+                  <span class="technology__stat-label">Heat Damage</span>
+                </div>
+              </div>
+              <div class="technology__wave" aria-hidden="true">
+                <svg viewBox="0 0 300 60" preserveAspectRatio="none"><defs><linearGradient id="wg" x1="0" y1="0" x2="300" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#EE86C0"/><stop offset="1" stop-color="#A865FF"/></linearGradient></defs><path d="M0 30 Q37.5 5 75 30 Q112.5 55 150 30 Q187.5 5 225 30 Q262.5 55 300 30" stroke="url(#wg)" stroke-width="2" fill="none" opacity="0.7"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= GALLERY — "Designed for Trend Setters" ======= -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">
+            <span class="white">DEsignED FOR</span><br/>
+            <span class="gradient-text">TREND SETTERS</span>
+          </h2>
+          <p class="section-sub">Your hair, your rules. Level up your routine with Lumea.</p>
+          <a href="#shop" class="btn btn--primary">Shop Now</a>
+        </div>
+      </div>
+
+      <!-- Three lifestyle images -->
+      <div class="gallery__strip">
+        <div class="gallery__item gallery__item--tall">
+          <div class="gallery__img gallery__img--1">
+            <div class="gallery__overlay"><span>Close-up Shine</span></div>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--mid">
+          <div class="gallery__img gallery__img--2">
+            <div class="gallery__overlay"><span>Effortless Blowout</span></div>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--tall">
+          <div class="gallery__img gallery__img--3">
+            <div class="gallery__overlay"><span>Natural Curl Definition</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- "See who's been using Lumea" ticker -->
+      <div class="container">
+        <div class="gallery__ticker">
+          <div class="gallery__ticker-inner">
+            <div class="gallery__ticker-track">
+              <span>· See who's been using Lumea</span>
+              <span>· See who's been using Lumea</span>
+              <span>· See who's been using Lumea</span>
+              <span>· See who's been using Lumea</span>
+              <span>· See who's been using Lumea</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UGC grid (7-up) -->
+        <div class="gallery__ugc">
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--1"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@sophiastyles</span>
+              <span class="gallery__ugc-caption">Obsessed with my new Lumea ✨</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--2"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@hairbymia</span>
+              <span class="gallery__ugc-caption">Zero frizz. Zero effort. 💜</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--3"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@trendingwithzara</span>
+              <span class="gallery__ugc-caption">AI hair care is the future 🔥</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--4"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@lumeafan</span>
+              <span class="gallery__ugc-caption">Never going back to regular dryers</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--5"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@glossyglam</span>
+              <span class="gallery__ugc-caption">Salon results at home 💅</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--6"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@radiantroots</span>
+              <span class="gallery__ugc-caption">My hair has never looked better</span>
+            </div>
+          </div>
+          <div class="gallery__ugc-card">
+            <div class="gallery__ugc-img gallery__ugc-img--7"></div>
+            <div class="gallery__ugc-info">
+              <span class="gallery__ugc-handle">@beautywithalex</span>
+              <span class="gallery__ugc-caption">The AI knows my hair better than I do</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= VIDEO — "Bring the Future of Haircare Home" ======= -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">
+            <span class="white">BRING THE FUTURE OF</span><br/>
+            <span class="gradient-text">HAIRCARE HOME</span>
+          </h2>
+          <p class="section-sub">Your hair, your rules. Level up your routine with Lumea.</p>
+          <a href="#shop" class="btn btn--primary">Shop Now</a>
+        </div>
+
+        <p class="video-section__label fade-up">See Lumea In Action</p>
+
+        <div class="video-section__layout fade-up">
+          <div class="video-section__side video-section__side--left"></div>
+
+          <div class="video-section__main">
+            <div class="video-section__poster">
+              <button class="video-section__play" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="video-section__side video-section__side--right"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= TESTIMONIALS — "Loved by Everyone Who Tries It" ======= -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-header__eyebrow">
+            <span class="section-header__line"></span>
+            <span class="eyebrow-text">Our Audience</span>
+            <span class="section-header__line"></span>
+          </div>
+          <h2 class="section-title">
+            <span class="gradient-text">Loved by Everyone</span><br/>
+            <span class="white">Who Tries It</span>
+          </h2>
+          <p class="section-sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
+        </div>
+
+        <div class="reviews__cards">
+          <div class="reviews__card fade-up">
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__quote">"Completely transformed my morning routine. My hair has never looked this good with half the effort."</p>
+            <div class="reviews__author">
+              <div class="reviews__avatar reviews__avatar--1"></div>
+              <div>
+                <strong>Emma R.</strong>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__card fade-up">
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__quote">"As a stylist I was sceptical, but the AI heat control is genuinely impressive. Clients love the results."</p>
+            <div class="reviews__author">
+              <div class="reviews__avatar reviews__avatar--2"></div>
+              <div>
+                <strong>Jessica M.</strong>
+                <span>Professional Stylist</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__card fade-up">
+            <div class="reviews__stars">★★★★★</div>
+            <p class="reviews__quote">"95% frizz reduction isn't just marketing — I measured it myself. Worth every penny."</p>
+            <div class="reviews__author">
+              <div class="reviews__avatar reviews__avatar--3"></div>
+              <div>
+                <strong>Priya K.</strong>
+                <span>Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="reviews__stats fade-up">
+          <div class="reviews__stat">
+            <span class="reviews__stat-value gradient-text">50,000+</span>
+            <span class="reviews__stat-label">Happy Customers</span>
+          </div>
+          <div class="reviews__stat-divider"></div>
+          <div class="reviews__stat">
+            <span class="reviews__stat-value gradient-text">4.9/5</span>
+            <span class="reviews__stat-label">Average Rating</span>
+          </div>
+          <div class="reviews__stat-divider"></div>
+          <div class="reviews__stat">
+            <span class="reviews__stat-value gradient-text">98%</span>
+            <span class="reviews__stat-label">Would Recommend</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CTA — "Let's Create Your Next Best Look" ======= -->
+    <section class="cta" id="shop">
+      <div class="cta__bg">
+        <div class="cta__orb cta__orb--1"></div>
+        <div class="cta__orb cta__orb--2"></div>
+      </div>
+      <div class="container">
+        <div class="cta__inner fade-up">
+          <div class="section-header__eyebrow">
+            <span class="section-header__line"></span>
+            <span class="eyebrow-text">The Future</span>
+            <span class="section-header__line"></span>
+          </div>
+          <h2 class="section-title">
+            <span class="white">LET'S CREATE YOUR</span><br/>
+            <span class="gradient-text">NEXT BEST LOOK</span>
+          </h2>
+          <p class="section-sub">Empowering your confidence with intelligent beauty technology.</p>
+          <div class="cta__actions">
+            <a href="#" class="btn btn--primary btn--lg">Shop Lumea</a>
+            <a href="#features" class="btn btn--ghost btn--lg">Explore Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">LUMEA</a>
+          <p>Empowering your confidence with intelligent beauty technology.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Instagram" class="footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="footer__social">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.75a4.85 4.85 0 01-1-.06z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.76 1.27-5.39 1.27-5.39s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.42-2.04 3.42-4.97 0-2.6-1.87-4.42-4.54-4.42-3.09 0-4.9 2.32-4.9 4.72 0 .93.36 1.94.81 2.48.09.11.1.2.07.32-.08.34-.27 1.09-.31 1.24-.05.2-.17.24-.38.15-1.41-.66-2.29-2.72-2.29-4.38 0-3.55 2.58-6.82 7.44-6.82 3.91 0 6.95 2.79 6.95 6.5 0 3.88-2.44 6.99-5.84 6.99-1.14 0-2.22-.59-2.58-1.29l-.7 2.62c-.25.98-.94 2.2-1.4 2.95.46.14.95.22 1.45.22 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">AI Hair Dryer</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Gift Sets</a></li>
+            <li><a href="#">Limited Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Lumea Beauty Inc. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
