@@ -125,80 +125,111 @@
 
     <!-- ======= FEATURES — "Designed for Your Hair" ======= -->
     <section class="features" id="features">
+      <!-- Background purple glows -->
+      <div class="features__glow features__glow--tl"></div>
+      <div class="features__glow features__glow--br"></div>
+      <div class="features__glow features__glow--ml"></div>
+
       <div class="container">
-        <!-- Heading -->
-        <div class="features__header">
+
+        <!-- Centred intro heading -->
+        <div class="features__intro">
           <h2 class="features__title">
-            <span class="text-white">DEsignED FOR</span><br/>
-            <span class="text-gradient">YOUR HAIR</span>
+            <span class="features__title-white">DEsignED FOR</span>
+            <span class="features__title-gradient"><em class="features__title-underline">YOUR</em> HAIR</span>
           </h2>
           <p class="features__sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
-          <a href="#" class="btn-shop-now">Shop Now</a>
+          <a href="#" class="features__btn-shop">Shop Now</a>
         </div>
 
-        <!-- Key Product Features row -->
-        <div class="features__kpf">
-          <p class="features__kpf-title"><em>Key Product Features</em></p>
-          <p class="features__kpf-sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
-        </div>
+        <!-- Key Product Features + feature list + product image -->
+        <div class="features__body">
 
-        <!-- Features + product layout -->
-        <div class="features__layout">
-          <!-- Left: feature list -->
-          <div class="features__list">
-            <div class="features__item">
-              <img src="https://www.figma.com/api/mcp/asset/50ef20c5-bd7b-4c72-9043-37669d991218" alt="" class="features__icon" />
-              <div>
-                <h3><em>Shine Enhancer</em></h3>
-                <p>Advanced coating technology boosts natural shine and smoothness with every use.</p>
-              </div>
-            </div>
-            <div class="features__item">
-              <img src="https://www.figma.com/api/mcp/asset/9ba0360c-7da5-4b6e-8a5d-6b573b8ea5b4" alt="" class="features__icon" />
-              <div>
-                <h3><em>Ionic Technology</em></h3>
-                <p>Reduces frizz by 95% while locking in moisture for salon-quality results.</p>
-              </div>
-            </div>
-            <div class="features__item">
-              <img src="https://www.figma.com/api/mcp/asset/d6650512-1926-4704-9e4b-b17237643e70" alt="" class="features__icon" />
-              <div>
-                <h3><em>Smart Heat Control</em></h3>
-                <p>AI learns your hair type and adjusts temperature in real-time for optimal protection.</p>
-              </div>
-            </div>
-            <div class="features__item">
-              <img src="https://www.figma.com/api/mcp/asset/7b3931c8-c103-45b6-84bc-40d5a4476fa5" alt="" class="features__icon" />
-              <div>
-                <h3><em>Lightning Fast</em></h3>
-                <p>Powerful airflow dries hair 3x faster without compromising on gentleness.</p>
-              </div>
-            </div>
+          <!-- KPF heading -->
+          <div class="features__kpf">
+            <p class="features__kpf-title">Key Product Features</p>
+            <p class="features__kpf-sub">Meet the AI-powered hair dryer that learns your hair and adapts to perfection. Every time.</p>
           </div>
 
-          <!-- Centre: product photo -->
-          <div class="features__product">
-            <img src="https://www.figma.com/api/mcp/asset/63d13ca1-271e-4d05-b526-346a2d0e9043" alt="Lumea AI hair dryer product shot" class="features__product-img" />
+          <!-- Left list + Right annotated product image -->
+          <div class="features__layout">
+
+            <!-- Left: 4 feature items with large circular icons -->
+            <div class="features__list">
+              <div class="features__item">
+                <img src="https://www.figma.com/api/mcp/asset/e962bbd1-0c07-481a-a4a1-eb6abef0adbf" alt="" class="features__icon" />
+                <div class="features__item-text">
+                  <h3>Shine Enhancer</h3>
+                  <p>Advanced coating technology boosts natural shine and smoothness with every use.</p>
+                </div>
+              </div>
+              <div class="features__item">
+                <img src="https://www.figma.com/api/mcp/asset/a18f82f7-9f3e-4214-a95e-65bb315ec164" alt="" class="features__icon" />
+                <div class="features__item-text">
+                  <h3>Ionic Technology</h3>
+                  <p>Reduces frizz by 95% while locking in moisture for salon-quality results.</p>
+                </div>
+              </div>
+              <div class="features__item">
+                <img src="https://www.figma.com/api/mcp/asset/4a7fc67d-50e2-4c62-8923-f2845bbdad5b" alt="" class="features__icon" />
+                <div class="features__item-text">
+                  <h3>Smart Heat Control</h3>
+                  <p>AI learns your hair type and adjusts temperature in real-time for optimal protection.</p>
+                </div>
+              </div>
+              <div class="features__item">
+                <img src="https://www.figma.com/api/mcp/asset/6383b452-3343-43dc-ba66-6d0da56c5854" alt="" class="features__icon" />
+                <div class="features__item-text">
+                  <h3>Lightning Fast</h3>
+                  <p>Powerful airflow dries hair 3x faster without compromising on gentleness.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: product image with callout annotations -->
+            <div class="features__product">
+              <img src="https://www.figma.com/api/mcp/asset/871b1cf2-ffcf-4cdb-9858-fd6c9c3bc01c" alt="Lumea AI hair dryer annotated" class="features__product-img" />
+              <!-- Callout annotations -->
+              <div class="features__callout features__callout--r" style="top:41%">
+                <span class="features__callout-line"></span><span class="features__callout-label">Shine Enhancer</span>
+              </div>
+              <div class="features__callout features__callout--r" style="top:89%">
+                <span class="features__callout-line"></span><span class="features__callout-label">Ionic Technology</span>
+              </div>
+              <div class="features__callout features__callout--l" style="top:26%">
+                <span class="features__callout-label">Smart Heat Control</span><span class="features__callout-line"></span>
+              </div>
+              <div class="features__callout features__callout--l" style="top:57%">
+                <span class="features__callout-label">Lightning Fast</span><span class="features__callout-line"></span>
+              </div>
+              <div class="features__callout features__callout--l" style="top:89%">
+                <span class="features__callout-label">Cool Shot</span><span class="features__callout-line"></span>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- AI Controlled cards -->
+        <!-- AI Controlled cards — large panel style -->
         <div class="ai-cards">
           <div class="ai-card">
-            <img src="https://www.figma.com/api/mcp/asset/532cc759-050d-45e3-8aff-0486eee3532d" alt="Lumea hair dryer front" class="ai-card__img" />
+            <img src="https://www.figma.com/api/mcp/asset/0f02e62b-2332-4591-b8ad-c38b2e685f6e" alt="Lumea hair dryer front" class="ai-card__img" />
+            <div class="ai-card__overlay"></div>
             <div class="ai-card__text">
-              <h3><em>AI Controlled</em></h3>
+              <h3>AI Controlled</h3>
               <p>Machine learning adapts heat and airflow in real-time based on hair texture, density, and moisture levels</p>
             </div>
           </div>
           <div class="ai-card">
-            <img src="https://www.figma.com/api/mcp/asset/f1f2c8a4-9744-41c9-a3bb-296d2c617488" alt="Lumea hair dryer front view" class="ai-card__img" />
+            <img src="https://www.figma.com/api/mcp/asset/61d5fd17-ae4e-4df0-90cc-cffe67514cb0" alt="Lumea hair dryer front view" class="ai-card__img" />
+            <div class="ai-card__overlay"></div>
             <div class="ai-card__text">
-              <h3><em>AI Controlled</em></h3>
+              <h3>AI Controlled</h3>
               <p>Machine learning adapts heat and airflow in real-time based on hair texture, density, and moisture levels</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
