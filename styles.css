@@ -183,10 +183,9 @@ button { cursor: pointer; background: none; border: none; color: inherit; font-f
   display: block;
 }
 
-/* Search — takes remaining space but capped */
+/* Search — takes all remaining space between logo and location */
 .nav__search {
   flex: 1;
-  max-width: 550px;
   display: flex;
   align-items: center;
   background: #ffffff;
