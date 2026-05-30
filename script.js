@@ -134,6 +134,12 @@ if (playBtn) {
   setPos(current, false);
   syncDots(current);
 
+  // Preload all slide images so off-screen slides load immediately on button click
+  allSlides().forEach(slide => {
+    const img = slide.querySelector('img[src]');
+    if (img && !img.complete) { const p = new Image(); p.src = img.src; }
+  });
+
   prevBtn.addEventListener('click', () => go(current - 1));
   nextBtn.addEventListener('click', () => go(current + 1));
   dots.forEach((d, i) => d.addEventListener('click', () => go(i + 1)));
@@ -209,6 +215,13 @@ if (playBtn) {
 
   setPos(current, false);
   syncDots(current);
+
+  // Preload all slide images so off-screen slides load immediately on button click
+  allSlides().forEach(slide => {
+    const img = slide.querySelector('img[src]');
+    if (img && !img.complete) { const p = new Image(); p.src = img.src; }
+  });
+
   startTimer();
 
   prevBtn.addEventListener('click',  () => { go(current - 1); resetTimer(); });
